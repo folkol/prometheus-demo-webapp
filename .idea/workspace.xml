@@ -379,6 +379,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <marker date="1464648774000" expanded="true" signature="48:829" ph="..." />
+            <marker date="1464648774000" expanded="true" signature="288:432" ph="..." />
+            <marker date="1464648774000" expanded="true" signature="444:564" ph="..." />
+            <marker date="1464648774000" expanded="true" signature="584:696" ph="..." />
+            <marker date="1464648774000" expanded="true" signature="716:818" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
