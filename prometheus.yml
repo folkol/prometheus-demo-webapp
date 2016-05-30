@@ -1,0 +1,14 @@
+# my global config
+global:
+  scrape_interval:     15s # By default, scrape targets every 15 seconds.
+  evaluation_interval: 15s # By default, scrape targets every 15 seconds.
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+  - job_name:       'log-handler'
+    scrape_interval: 5s
+    metrics_path: webapp-1.0-SNAPSHOT/metrics
+    
+    target_groups:
+      - targets: ['192.168.1.212:8080']
