@@ -1,1 +1,17 @@
-docker run -p 9090:9090 -v /Users/folkol/prometheus.yml:/etc/prometheus/prometheus.yml        prom/prometheus
+docker run --name="log-handler-demo" -p 9090:9090 -v /Users/folkol/prometheus/config.yml:/etc/prometheus/prometheus.yml prom/prometheus
+
+Berätta om labben (monitoring av fel i loggen, att jag först tänkte scrapa log, men bestämde mig för att göra en log handler istället...)
+Visa log handlern
+Visa BrokenServlet
+Visa web.xml, berätta om metrics-servleten (och att det finns andra sätt att exponera)
+Visa logging properties
+
+Visa prometheus-conf
+Visa prometheus-data / graph (även promdash, eller snarare Grafana...)
+
+Visa Console för java_util_logging_messages_total
+Visa vectorn [5m]
+Visa rate() av densamma (rate of change inom givet intervall...)
+Visa graf av rate of change över någon minut...
+
+Grafana: admin/admin
