@@ -15,14 +15,18 @@ public class BrokenServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException
     {
+        LOGGER.info("Minor event, no throwable");
         if (Math.random() < BROKENNESS) {
-            throw new RuntimeException("Oh noes :(");
+            LOGGER.severe("Major event, no throwable");
         }
         if (Math.random() < BROKENNESS) {
-            LOGGER.log(Level.SEVERE, "Exceptional!", new Exception("Exceptional!"));
+            LOGGER.log(Level.WARNING, "Mumble", new IllegalArgumentException("No!"));
         }
         if (Math.random() < BROKENNESS) {
-            LOGGER.severe("Oh crap!");
+            LOGGER.log(Level.SEVERE, "Deep shit! :(",
+                new RuntimeException("Exceptional!",
+                    new Exception("Oh noes!",
+                        new IOException("Out of disk space"))));
         }
         response.getWriter().println("Hello, world!");
     }
